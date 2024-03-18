@@ -1,0 +1,16 @@
+{{!--
+Re-usable card for linking to posts
+--}}
+
+<article class="gh-card {{post_class}}">
+    <a class="gh-card-link" href="{{url}}">
+        {{#if feature_image}}
+        <div class="gh-card-content">
+           
+            <h2 class="gh-card-title">{{title}}</h2>
+            <p>{{excerpt}}</p>
+        </div>
+        {{/if}}
+  
+    </a>
+</article>

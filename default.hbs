@@ -1,0 +1,155 @@
+<html lang="{{@site.locale}}">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/index.css" />
+    <link rel="stylesheet" href="/assets/ghost.css" />
+    <link rel="stylesheet" href="/assets/header.css" />
+    <link rel="stylesheet" href="/assets/homepage.css" />
+    <link rel="stylesheet" href="/assets/copyright.css" />
+    <link rel="stylesheet" href="/assets/consult.css" />
+    <link rel="stylesheet" href="/assets/contentpage.css" />
+    <script src="{{asset 'built/index.js'}}" defer></script>
+
+    <title>{{meta_title}}</title>
+
+    {{ghost_head}}
+    {{! Outputs important meta data and settings, should always be in <head> }}
+
+  </head>
+  <body class="{{body_class}}">
+    <div class="gh-viewport">
+
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img class="desktop-logo" src="/static/logo.png" alt="Logo" />
+            <img
+              class="mobile-logo"
+              src="/static/mobile-logo.png"
+              alt="Mobile Logo"
+            />
+          </div>
+          <img
+            class="mobile-logo"
+            src="/static/mobileheader.png"
+            alt="Mobile Logo"
+          />
+          <button
+            ref="hamburgerButton"
+            class="hamburger"
+            @click="toggleNav"
+          ></button>
+          <nav class="nav" :class="{ open: isOpen }">
+
+            <ul>
+              <ul>
+                <li>
+                  <img
+                    class="nav-icon"
+                    src="/static/mobilenavback.png"
+                    alt="Nav Icon"
+                    @click="toggleNav"
+                  />
+                  <a href="首頁">首頁</a>
+                </li>
+                <li><a href="#about-section">關於我們</a></li>
+                <li><a href="#pay">方案與價格</a></li>
+                <li><a href="#online">線上諮詢</a></li>
+                <li><a href="#">部落格文章</a></li>
+              </ul>
+            </ul>
+
+            <div class="moblie-social-icons">
+              <img src="/static/mobileig.png" alt="Instagram" />
+              <img src="/static/mobileline.png" alt="LINE" />
+            </div>
+          </nav>
+          <div class="social-icons">
+            {{search}}
+          </div>
+        </div>
+      </header>
+      <main class="gh-main">
+
+        {{{body}}}
+        {{! All content gets inserted here, index.hbs, post.hbs, etc }}
+
+      </main>
+
+      {{! Outputs important scripts - should always be included before closing body tag }}
+      <footer class="copyright-section">
+        <div class="container">
+          <div class="copyright-image-container copyright-content">
+            <div class="Companycon">
+              <img src="/static/bee-footer-logo.png" alt="" />
+              <p class="copyright">© Startbiz, 2023. All rights reserved.</p>
+            </div>
+
+            <div class="info-container">
+              <div class="Companycon">
+                <h3 class="Company">幫你創股份有限公司</h3>
+                <p class="Company-EN">StartBiz.Co.Ltd</p>
+              </div>
+              <div class="info">
+                <div class="info-div">
+                  <p class="info-div-p">會計夥伴:</p>
+                  <a href="#">析齊會計師事務所</a>
+                </div>
+                <div class="info-div">
+                  <p class="info-div-p">電子信箱:</p>
+                  <a href="mailto:startbiz@gmail.com">startbiz@gmail.com</a>
+                </div>
+                <div class="info-div">
+                  <p class="info-div-p">台北服務處:</p>
+                  <a
+                    href="https://maps.app.goo.gl/q6Rn54qwv1PszX7z8"
+                  >106台北市大安區市民大道三段198號7樓</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          {{! <div class="copyright-text-container">
+            <img src="helpyoulogo.png" alt="Text Image" />
+
+          </div> }}
+        </div>
+        <div class="mb-container">
+          <div class="mbfooterlogo">
+            <img src="/static/bee-footer-logo.png" alt="Text Image" />
+          </div>
+          <div>
+            <h3 class="mb-Company">幫你創股份有限公司</h3>
+            <p class="mb-Company-EN">StartBiz.Co.Ltd</p>
+          </div>
+          <div class="mb-info-container">
+            <div class="info-pair">
+              <div class="info-div">
+                <p class="info-div-p">會計夥伴:</p>
+                <a href="#">析齊會計師事務所</a>
+              </div>
+              <div class="info-div">
+                <p>電子信箱:</p>
+                <a href="mailto:startbiz@gmail.com">startbiz@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-div">
+              <p>台北服務處:</p>
+              <a
+                href="https://maps.app.goo.gl/q6Rn54qwv1PszX7z8"
+              >106台北市大安區市民大道三段198號7樓</a>
+            </div>
+          </div>
+          <div class="mb-copyright-text-container">
+            <p>© Startbiz, 2023. All rights reserved.</p>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+
+  </body>
+</html>

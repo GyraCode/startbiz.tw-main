@@ -1,0 +1,228 @@
+/* Dektop Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff93;
+    color: white;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000; 
+}
+
+.logo img {
+    width: 100px; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    width: 100%; 
+}
+
+.nav ul {
+    display: flex;
+    gap: 15px;  
+    padding: 0; 
+    margin: 0;  
+    list-style-type: none;  
+    color: #42403D;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700; 
+}
+
+a {
+    color: #42403D;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:visited {
+    color: #42403D;
+}
+
+.nav li {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.hamburger,.mobile-logo,.moblie-social-icons,.nav-icon{
+    display: none;
+}
+
+
+
+/*----------- Mobile Header */
+
+@media (max-width: 768px) {
+    .nav {
+        height: 100%;
+        width: 250px; /* 或者您需要的任何宽度 */
+        position: fixed;
+        top: 0;
+        right: -250px; /* 开始时向右偏移，完全隐藏导航栏 */
+        z-index: 1000;
+        background-image: url('../static/mobilenav.png');
+        background-size: cover;
+        transition: right 0.3s ease-in-out;
+        
+    }
+    .nav ul li a[href="首頁"]::after { /* 确保这里的href属性匹配你链接的实际href */
+        content: "HOME"; /* 添加的文本 */
+        display: block; /* 将伪元素变为块级元素以使其显示在下方 */
+        font-size: 12px;
+        
+        
+      }
+    
+      /* 更改'關於我們'链接的样式 */
+      .nav ul li a[href="關於我們"]::after { /* 这假设'關於我們'的实际链接是#關於我們 */
+        content: "ABOUT ME"; /* 添加的文本 */
+        display: block; /* 同上 */
+        font-size: 12px;
+      
+      }
+      .nav ul li a[href="方案與價格"]::after { /* 这假设'關於我們'的实际链接是#關於我們 */
+        content: "PLAN&PRICE"; /* 添加的文本 */
+        display: block; /* 同上 */
+        font-size: 12px;
+      
+      }
+      .nav ul li a[href="線上諮詢"]::after { /* 这假设'關於我們'的实际链接是#關於我們 */
+        content: "ONLINE INQUIRY"; /* 添加的文本 */
+        display: block; /* 同上 */
+        font-size: 12px;
+     
+      }
+      .nav ul li a[href="部落格文章"]::after { /* 这假设'關於我們'的实际链接是#關於我們 */
+        content: "BLOG ARTICLE"; /* 添加的文本 */
+        display: block; /* 同上 */
+        font-size: 12px;
+     
+      }
+
+    .nav.open {
+        transform: translateX(-250px);
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-icon {
+        display: inline-block;
+        margin-right: 10px; /* 根据需要调整 */
+        cursor: pointer; /* 显示为可点击的指针 */
+        transform: translate(60px,-60px);
+      }
+
+    li {
+        transform: translate(90px,150px);
+        margin: 0; 
+        padding: 10px; 
+        list-style: none; 
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 700; 
+        font-size: 24PX;
+        text-align: right;
+    }
+    
+    /* 更好的文本可读性，可选的文本阴影 */
+    li a {
+        color:#fff;
+
+    }
+
+    
+    .hamburger {
+        background-color: transparent; 
+        border: none;  
+        position: relative; 
+        width: 30px;  
+        height: 4px; 
+        background-color: 
+        #FAC02C;  
+        outline: none;  
+        border-radius: 50px;  
+        display: block;
+        order: 2;  
+    }
+
+    .hamburger::before, .hamburger::after {
+        content: '';  
+        position: absolute;
+        left: 0;  
+        width: 100%;  
+        height: 4px; 
+        background-color: 
+        #FAC02C;  
+        transition: transform 0.3s;  
+    }
+
+    .hamburger::before {
+        top: -10px;  
+    }
+
+    .hamburger::after {
+        bottom: -10px;  
+    }
+
+    img[src="/mobileheader.png"] {
+        display: none;
+    }
+
+    .desktop-logo {
+        display: none;
+    }
+
+    .social-icons{
+        display: none;
+    }
+
+    .moblie-social-icons{
+        display: block;
+        transform: translate(-10px,600px);
+        color: #fff;
+        gap: 10px;
+    }
+
+    .mobile-logo {
+        display: block;
+        order: 1; 
+    }
+
+    .container {
+        flex-direction: row; 
+        justify-content: space-between;  
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    img[src="/mobileheader.png"] {
+        display: block;
+        order: 2; 
+        margin-left: 25%; 
+    }
+
+    .hamburger {
+        display: block;
+        order: 3; 
+    }
+
+    .mobile-logo {
+        display: block;
+        order: 1; 
+    }
+
+    .container {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+}

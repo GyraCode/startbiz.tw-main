@@ -1,0 +1,60 @@
+.StartBiz {
+    position: relative;
+}
+
+.index-leftflower {
+    position: absolute;  
+    top: -4%; 
+    z-index: 5;  
+    width: 20%;
+}
+.index-leftSflower {
+    position: absolute;  
+    top: 0; 
+    left: 10%;
+    z-index: 5;  
+    width: 20%;
+}
+
+.index-rightflower{
+    position: absolute;  
+    top:14%; 
+    right: 0;
+    transform: translateY(-60%);
+    z-index: 5; 
+}
+
+
+.mobileleftflower,.mobilego{
+    display: none;
+}
+
+@media (max-width: 768px) { /* 假設小於768px就是手機版 */
+    .index-leftSflower,
+    .index-leftflower,
+    .mainrightcorner,
+    .mainleftcorner{
+        display: none ; /* 在手機版時隱藏整個容器 */
+    }
+    
+    .mobileleftflower {
+        display: block;
+        position: absolute;  
+        top: 6%; /* 使用px而不是%确定元素位置 */
+        left: 0;
+        z-index: 0; 
+        width: 100%;
+    }
+    .mobilego{
+        display: block;
+        position: absolute;
+        top: 6%; /* 修改为具体数值以确保固定位置 */
+        left: 45%; /* 可以调整具体数值来定位 */
+        z-index: 0; 
+    }
+    .hp-slogan {
+        position: relative; /* 確保z-index會生效 */
+        z-index: 10;
+    }
+}
+

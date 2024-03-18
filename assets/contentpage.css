@@ -1,0 +1,1069 @@
+.second {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  background: 
+    linear-gradient(175deg, #FDF2D6 25%, transparent 25%, transparent 81%, #E8F2F6 81%),
+    linear-gradient(0deg, #E8F2F6 42%, #FAC02C 42%);
+
+  padding: 20px;
+
+}
+.serve-content{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  background-color: #A4C3D0;
+  width: 100%; 
+  height: 150%; 
+
+}
+.serve{
+  margin-top:15% ;
+}
+.option-content{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  background-color: #E8F2F6;
+  width: 100%; 
+  height: 100%;
+
+}
+
+  
+  
+.image-wrapper {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+}
+
+.contentpage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  margin-top: 150px;  
+  width: 100%; 
+  height: 100%; 
+}
+
+.st-box {
+  background-color: #A4C3D0;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.st-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.st-row img {
+  max-width: 50px;
+  height: auto;
+}
+
+
+.bee-wrapper {
+  width: 100%;  /* 让它占满一整行 */
+  text-align: center; /* 为了居中图片 */
+
+}
+
+.image-wrapper, 
+.bee-wrapper {
+  width: 100%;  /* 让它们各自占满一整行 */
+   /* 为了居中图片 */
+  margin-top: 5%;  
+  margin-bottom: 5%;
+}
+
+
+
+
+.bug-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greenbug-container, .redbug-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greenbug-container {
+  margin-right: 10px;  /* 或你需要的任何间距 */
+}
+
+
+
+/* 如果你想要控制這兩個蟲子的圖片大小，你可以如下這樣做: */
+.greenbug-container img, .redbug-container img {
+  width: 100%;  /* 調整為所需的大小 */
+  max-width: 250px;  /* 這只是一個示例值 */
+  height: auto;
+  transition: width 0.3s, height 0.3s;  /* 平滑过渡 */
+}
+
+
+.slogan {
+  display: flex;
+  align-items: center; /* 這會使中間的文字垂直居中 */
+  width: 30%;
+  height: 200px;
+}
+
+.left-image {
+  margin-top: auto;
+}
+
+.right-image {
+  margin-bottom: auto;
+}
+
+
+.index-write.main-container {
+  width: 960px;
+  height: 815px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  display: inline-flex;
+}
+
+.index-write.inner-container {
+  width: 960px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.index-write.content-container {
+  width: 960px;
+  height: 815px;
+  position: relative;
+}
+
+.index-write.section {
+  width: 960px;
+  height: 706px;
+  padding-top: 117px;
+  padding-bottom: 53px;
+  padding-left: 35px;
+  padding-right: 35px;
+  left: 0px;
+  top: 109px;
+  position: absolute;
+  background: #A4C3D0;
+  border-radius: 15px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  display: inline-flex;
+}
+
+.index-write.block {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 56px;
+  display: flex;
+}
+
+.index-write.image-block {
+  width: 400px;
+  height: 240px;
+  background: #D9D9D9;
+  border-radius: 15px;
+}
+.index-write.block-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.index-write.text-block {
+  width: 407px;
+  height: 100px;
+  color: white;
+  font-size: 20px;
+  font-family: Noto Sans TC;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.index-write.sidebar {
+  width: 205.78px;
+  height: 206.78px;
+  left: 368px;
+  top: 0px;
+  position: absolute;
+}
+
+.index-write.number-block {
+  width: 120px;
+  height: 98.71px;
+  left: 10.58px;
+  top: 25.94px;
+  position: absolute;
+}
+
+.index-write.section-title {
+  left: -0px;
+  top: 55.71px;
+  position: absolute;
+  text-align: center;
+  color: #42403D;
+  font-size: 29.97px;
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.index-write.number {
+  left: 14.36px;
+  top: -0px;
+  position: absolute;
+  text-align: center;
+  color: #4A7688;
+  font-size: 44.95px;
+  font-family: Ultra;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44.95px;
+  word-wrap: break-word;
+}
+
+.index-write.plus {
+  left: 84.29px;
+  top: 6.68px;
+  position: absolute;
+  text-align: center;
+  color: #A4C3D0;
+  font-size: 24.97px;
+  font-family: Ultra;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44.95px;
+  word-wrap: break-word;
+}
+
+.text {
+  flex: 2;
+  text-align: center;
+}
+
+.text p {
+  font-weight: 900;
+  font-size: 24px;
+  font-family: 'Noto Sans TC', sans-serif;
+
+}
+
+.text h1{
+  font-weight: 900;
+  font-size: 36px;
+  color: #fff;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+/* 合作夥伴 */
+
+.friend-container {
+  width: 960px;
+  height: 432px;
+  position: relative;
+}
+
+.friend-background {
+  width: 960px;
+  height: 323px;
+  left: 0;
+  top: 109px;
+  position: absolute;
+  background: #A4C3D0;
+  border-radius: 15px;
+}
+
+.friend-content {
+  width: 835.86px;
+  height: 381.45px;
+  left: 53px;
+  top: 0;
+  position: absolute;
+}
+
+.friend-item {
+
+  height: 209px;
+  top: 172.45px;
+  position: absolute;
+}
+
+.friend-item2 {
+
+  height: 209px;
+  left: 200px;
+  top: 172.45px;
+  position: absolute;
+}
+
+.friend-item3 {
+
+  height: 209px;
+  left: 460px;
+  top: 172.45px;
+  position: absolute;
+}
+
+.friend-item4 {
+
+  height: 209px;
+  left: 660px;
+  top: 172.45px;
+  position: absolute;
+}
+
+
+.friend-item-content {
+  height: 209px;
+  padding-bottom: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend-item-text {
+  width: 209px;
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-family: Noto Sans TC;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.friend-join-us {
+  width: 208.86px;
+  height: 208.86px;
+  position: relative;
+}
+
+.friend-join-us-text {
+  color: #4A7688;
+  font-size: 25px;
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.friend-join-us-text-sub {
+  color: #4A7688;
+  font-size: 16px;
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.friend-join-us-icon {
+  width: 106.73px;
+  height: 77px;
+  left: 50.63px;
+  top: 40.55px;
+  position: absolute;
+}
+
+.friend-partners {
+  width: 120px;
+  height: 98.71px;
+  left: 362.44px;
+  top: 53.94px;
+  position: absolute;
+}
+
+.whitecover{
+  left: -30px;
+  top: -30px;
+  position: absolute;
+ 
+}
+
+.slogan-center-container {
+  width: 100%;
+  height: 300.80px;
+  position: relative;
+  
+}
+
+
+.slogan-center-text {
+  width: 415.56px;
+  left: 251.81px;
+  top: 52.54px;
+  position: absolute;
+  color: black;
+  font-size: 59.94px;
+  font-family: Ultra;
+  font-weight: 400;
+  line-height: 44.95px;
+  word-wrap: break-word;
+  line-height: 1;
+}
+
+.center-left-bee{
+  position: absolute;
+  left: 551.81px;
+  top: -20px;
+}
+
+.center-right-bee{
+  position: absolute;
+  right: 150px;
+  top: 50px;
+}
+
+.center-leef{
+  position: absolute;
+  top: -70px;
+}
+.center-leefS-right{
+  position: absolute;
+  top: -100px;
+  right: 130px;
+  z-index: 5;
+}
+.center-leefM-right{
+  position: absolute;
+  top: -270px;
+  right: 0;
+  z-index: 1;
+}
+.friend-partners-text {
+  color: #42403D;
+  font-size: 29.97px;
+  font-family: Noto Sans TC;
+  font-weight: 700;
+  word-wrap: break-word;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+
+}
+
+.friend-partners-number {
+  color: #4A7688;
+  font-size: 44.95px;
+  font-family: Ultra;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44.95px;
+  word-wrap: break-word;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+ 
+}
+
+.friend-partners-plus {
+  color: #A4C3D0;
+  font-size: 24.97px;
+  font-family: Ultra;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44.95px;
+  word-wrap: break-word;
+  position: absolute;
+  top: 50px;
+  left: 135px;
+}
+
+/* 服務項目 */
+.serve  {
+  padding: 15px; 
+  margin-bottom: 20px;  
+  width: 100%;
+  text-align: center;
+}
+
+.serve p {
+  font-weight: 900;
+  font-size: 36px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #fff;
+}
+
+.serve h3 {
+  font-weight: 400;
+  font-size: 54px;
+  font-family: 'Ultra', sans-serif;
+  color: #fff;
+}
+/* 里程碑 */
+.score-wrapper{
+  margin-top: 3%;
+  width: 100%;  /* 让它占满一整行 */
+  text-align: center; /* 为了居中图片 */
+}
+
+/* 擊拳 */
+.head-wrapper{
+  width: 100%;  /* 让它占满一整行 */
+  text-align: center; /* 为了居中图片 */
+  height: 350px;
+}
+
+/* 六張卡片 */
+.option{
+  width: 100%;
+  text-align: center;
+  
+}
+
+.option p {
+  font-weight: 900;
+  font-size: 36px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #4A7688;
+}
+
+.option h3{
+  font-weight: 400;
+  font-size: 48px;
+  font-family: 'Ultra', sans-serif;
+  color:  #C4D6DE;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 3%;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: 20px;
+  width: 320px;
+  display: flex; 
+  flex-direction: row; /* 確保內容水平對齊 */
+  align-items: center;
+  overflow: hidden; /* 這將幫助確保內容不超出卡片的邊界 */
+  padding: 5px;
+}
+
+.card img {
+  width: 40%;
+  height: auto; /* 這可以確保圖像保持其比例 */
+  max-width: 120px;
+  border-radius: 5px 0 0 5px;
+}
+
+.text-content,
+.text-content-yellow {
+  flex: 1; 
+  padding: 15px;
+  text-align: left;
+}
+
+
+
+.text-content h2 {
+  margin-top: 0;
+  font-weight: 900;
+  font-size: 24px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #4A7688;
+}
+
+.text-content-yellow h2{
+  margin-top: 0;
+  font-weight: 900;
+  font-size: 24px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #FAC02C;
+} 
+
+
+
+.text-content ul li,
+.text-content-yellow ul li
+ {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: 'Noto Sans TC', sans-serif;
+  text-align: left;
+}
+
+.text-content hr {
+  border: 0;
+  border-top: 3px solid #E8F2F6;
+  margin: 10px 0;
+}
+
+.text-content-yellow hr{
+  border: 0;
+  border-top: 3px solid #FDF2D6;
+  margin: 10px 0;
+}
+
+/* 方案 */
+
+/* 新手專案卡片 */
+.new-card {
+  position: relative;
+  width: 320px;
+  background-color: #fff;
+  padding: 20px 0 0 0;
+  margin: 60px 30px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px ;
+}
+
+.new-card-header {
+  position: absolute;
+  top: -17px; 
+  left: 10px;
+  padding: 1px 20px;
+  background-color: #A4C3D0;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%); /* 修改此值以得到正確的六角形 */
+  z-index: 1;
+}
+
+.new-card-header p{
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.new-card-title {
+  position: relative; /* 讓偽元素基於這個元素定位 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+}
+
+.new-card-title p{
+  color: #4A7688;
+}
+
+.pink-color{
+  background-color:
+  #FFAB99 ;
+}
+
+.new-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+}
+
+.new-card-content p{
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  
+}
+
+.new-card-title, .new-card-content {
+  padding-left: 10%; /* 或者您想要的其他值 */
+  padding-right: 10%; /* 或者您想要的其他值 */
+}
+
+.new-card-title::after {
+  content: ""; /* 必須設置的值 */
+  position: absolute;
+  left: 20px; /* 這裡是空白的部分 */
+  right: 20px; /* 這裡也是空白的部分 */
+  top: 85%;
+  bottom: 0;
+  height: 3px; /* 這裡設置底線的高度 */
+  background-color: 
+  #E8F2F6; /* 這裡設置底線的顏色 */
+}
+
+.new-learn-more {
+  background-color: #A4C3D0;
+  text-align: right;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.new-learn-more p{
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Noto Sans TC', sans-serif
+}
+
+.price {
+  display: flex; /* 让 "999" 和 "元/月" 并排显示 */
+  align-items: center; /* 垂直居中对齐 */
+  font-size: 24px; /* 调整 "999" 的字体大小，根据需要调整大小 */
+}
+
+.price h5 {
+  margin-right: 5px; /* 在 "999" 右侧添加一些间距 */
+  font-size: 36px; /* 放大 "999" 的字体大小，根据需要调整大小 */
+}
+
+.price p {
+  font-size: 18px; /* 调整 "元/月" 的字体大小，根据需要调整大小 */
+  color: #A19C95;
+}
+
+.mobilescore-score-wrapper,
+.head-wrapper,
+.mobile-content,
+.mobile-slogan,
+.MBindex-writr-container,
+.MB-serve,
+.MB-beeandleef,
+.MB-fontUnder,
+.MB-optionandpay,
+.MB-Phone-left,
+.MB-Phone-Score,
+.MB-write-content
+{
+  display: none;
+}
+
+.MB-write-content {
+  display: none !important;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .second {
+
+    background: 
+    linear-gradient(175deg, #FDF2D6 25%, transparent 25%, transparent 81%, #E8F2F6 81%),
+    linear-gradient(25deg, #E8F2F6 63%, #FAC02C 23%);
+  
+   
+  }
+  .card-group{
+    margin-top: 120%;
+  }
+
+ 
+
+  .bug-container {
+    flex-direction: column; 
+    margin-top: 80%;
+  }
+
+  .greenbug-container, .redbug-container {
+    width: 100%; 
+    margin-bottom: 10px;  
+  }
+
+  .greenbug-container img, .redbug-container img {
+    width: 120%;  
+    max-width: none;  
+    height: auto;  
+    
+  }
+
+  .greenbug-container {
+    margin-right: 0;  
+  }
+
+  
+  .slogan {
+    width: 100%; 
+}
+  .slogan .text p {
+    font-size: 24px;
+  }
+
+  .slogan .text h1 {
+    font-size: 36px;
+  }
+
+  .image-wrapper img[src="greenbugright.png"] {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .image-wrapper img[src="redbugleft.png"] {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .image-wrapper {
+    flex-direction: column-reverse;
+}
+
+.image-wrapper img {
+  width: 100%;
+  margin: 20px 0;  
+}
+
+
+
+
+.image-wrapper img[src="phone.png"] {
+margin-left: -40%;
+margin-bottom: 10%;
+}
+
+.score-wrapper,
+.friend-container,
+.index-write,
+.slogan-center-container,
+.index-write.main-container,
+.image-wrapper-PC,
+.paycard-container,
+.option,
+.option-content,
+.serve-content
+
+{
+  display: none;
+}
+
+.mobile-head-wrapper img {
+  width: 100%;    
+  height: auto;  
+}
+
+.mobilescore-score-wrapper,
+.MBindex-writr-container,
+.MB-serve,
+.MBindex-writr-container,
+.MB-serve,
+.MB-beeandleef,
+.MB-fontUnder,
+.MB-optionandpay,
+.MB-Phone-left,
+.MB-Phone-Score,
+.MB-write-content {
+  display: block;
+}
+.MB-write-content {
+  display: inline-flex!important;;
+}
+
+.mobile-content {
+  position: relative; 
+  display: inline-block; 
+  width: 100%;
+}
+
+.mobile-content-flowers {
+  position: relative;
+  height: 250px; 
+  width: 100%;  
+}
+
+.mobile-content-flowers img[src="mbcontentleftflower.png"], 
+.mobile-content-flowers img[src="mbcontentrightflower.png"] {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+
+.mobile-content-flowers img[src="mbcontentleftflower.png"] {
+  left: -5%; 
+  width: 60%;
+  
+}
+
+.mobile-content-flowers img[src="mbcontentrightflower.png"] {
+  right: -5%; 
+  top: -40%;
+  left: auto; 
+}
+
+
+.mobile-content-movingbee {
+  margin-left: 40px; 
+}
+.mobile-slogan{
+  display: block;
+  margin-top: 10%;
+  margin-left: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.mobile-slogan h1{
+
+  font-weight: 400;
+  font-size: 48px;
+  font-family: 'Ultra', sans-serif;
+  color:  #000000;
+  text-align: left;
+  margin-top: 0;    
+  margin-bottom: 0; 
+}
+
+.card-container {
+  display: flex;      
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.new-card {
+  width: 100%; 
+  margin: 10% 0 0 0;
+}
+
+.new-card-content {
+  font-size: 12px; 
+}
+
+.paycard-container{
+  margin-top: 250%;
+  flex-wrap: wrap;
+}
+
+.MBindex-writr-container {
+  width: 300px;
+  height: 886px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.MBindex-writr-box {
+  width: 300px;
+  height: 886px;
+  position: relative;
+}
+
+.MBindex-writr-background {
+  width: 300px;
+  height: 795px;
+  left: 0px;
+  top: 91px;
+  position: absolute;
+  background: #A4C3D0;
+  border-radius: 40px;
+}
+
+.MBindex-writr-icon-box {
+  width: 115px;
+  height: 115px;
+  left: 92px;
+  top: 0px;
+  position: absolute;
+}
+
+.MBindex-writr-icon {
+  width: 72px;
+  height: 67px;
+  left: 21px;
+  top: 20px;
+  position: absolute;
+}
+
+.MBindex-writr-label {
+  left: 0px;
+  top: 41px;
+  position: absolute;
+  text-align: center;
+  color: #42403D;
+  font-size: 18px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.MBindex-writr-number {
+  left: 11px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: #4A7688;
+  font-size: 36px;
+  font-family: Ultra;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 45px;
+  word-wrap: break-word;
+}
+
+.MBindex-writr-plus {
+  left: 57px;
+  top: 7px;
+  position: absolute;
+  text-align: center;
+  color: #A4C3D0;
+  font-size: 18px;
+  font-family: Ultra;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 45px;
+  word-wrap: break-word;
+}
+
+.MBindex-writr-description {
+  width: 256px;
+  height: 728px;
+  left: 22px;
+  top: 126px;
+  position: absolute;
+}
+
+.MBindex-writr-text {
+  width: 242px;
+  height: 116px;
+  left: 7px;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.MBindex-writr-text:nth-child(1) {
+  top: 228px;
+  background: #D9D9D9;
+  border-radius: 40px;
+}
+
+.MBindex-writr-text:nth-child(2) {
+  top: 612px;
+  background: #D9D9D9;
+  border-radius: 40px;
+}
+
+}
+

@@ -1,0 +1,207 @@
+.copyright-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAC02C;
+    padding:4%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.copyright-image-container img {
+    height: auto;
+   
+}
+
+.copyright-content{
+    display: flex;
+    justify-content: center;
+}
+
+.copyright-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.copyright-text-container img {
+    margin-bottom: 10px;
+    height: 50px; 
+    width: auto;
+}
+
+.copyright-text-container p {
+    font-size: 12px; 
+    color: #777;
+    margin: 0;
+    display: flex; 
+    align-items: center; 
+    height: 50px; 
+}
+
+/* 桌面版設定 */
+.desktopfooter {
+    display: block;
+}
+
+.mb-container,
+.mobilefooter {
+    display: none;
+}
+
+.info {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: start; 
+}
+
+.info-div {
+    flex: 1; 
+    padding: 0 10px; 
+    border-left: 3px solid #FFFFFF;
+    white-space: nowrap;
+   
+}
+
+
+.info-div h2 {
+    margin: 0 0 5px 0; 
+    font-size: 1em; 
+}
+
+.info-div p {
+    margin: 0; 
+    font-size: 13px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+
+}
+
+.info-div a,
+.info-div a:link,    
+.info-div a:visited, 
+.info-div a:hover,   
+.info-div a:active,  
+.info-div a:focus {
+    font-size: 13px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+.Company{
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.info-div-p{
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+
+.Company-EN{
+    font-size: 12px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.copyright{
+    font-size: 13.00px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+.info-container{
+    margin-left: 15%;
+}
+
+/* 手機版媒體查詢 */
+@media (max-width: 768px) {
+    .copyright-image-container,
+    .copyright-text-container
+    {
+        display: none;
+    }
+    .mb-container,
+    .mb-info-container{
+        display: block;
+    }
+    .mbfooterlogo{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .mb-container{
+        width: 90%;
+    }
+
+    .mb-Company{
+        font-size: 18px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 400;
+        color: #42403D;
+    }
+    .mb-Company-EN{
+        font-size: 12px;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-weight: 400;
+        color: #42403D;
+    }
+ 
+
+    .mb-info-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        transform: translateX(-50px);
+      }
+    
+      .info-pair {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .info-div {
+        margin-bottom: 10px; 
+        margin-left: 30px;
+      }
+    
+      .info-pair .info-div {
+        width: 50%; 
+        box-sizing: border-box; 
+      }
+
+
+    .mobilefooter{
+        display: block;
+    }
+
+    .mb-copyright-image-container{
+        text-align: center;
+
+    }
+    .mb-copyright-text-container{
+        text-align: center;
+    }
+
+    .mb-copyright-text-container p {
+        font-size: 12px; 
+        color: #777;
+
+        margin-top: 30px;
+      
+    }
+}
+
+
+
+
