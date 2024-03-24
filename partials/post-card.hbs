@@ -1,52 +1,130 @@
 {{!--
 Re-usable card for linking to posts
 --}}
-
 <article class="gh-card {{post_class}}">
-    <a class="gh-card-link" href="{{url}}">
-        {{#if feature_image}}
-            <picture class="gh-card-picture">
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="avif"}} 30w,
-                {{img_url feature_image size="xs" format="avif"}} 100w,
-                {{img_url feature_image size="s" format="avif"}} 300w,
-                {{img_url feature_image size="m" format="avif"}} 600w,
-                {{img_url feature_image size="l" format="avif"}} 1200w,
-                {{img_url feature_image size="xl" format="avif"}} 2000w"
-                {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
-                type="image/avif"
-                {{^if @first}}loading="lazy"{{/if}}
-              >
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="webp"}} 30w,
-                {{img_url feature_image size="xs" format="webp"}} 100w,
-                {{img_url feature_image size="s" format="webp"}} 300w,
-                {{img_url feature_image size="m" format="webp"}} 600w,
-                {{img_url feature_image size="l" format="webp"}} 1200w,
-                {{img_url feature_image size="xl" format="webp"}} 2000w"
-                {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
-                type="image/webp"
-                {{^if @first}}loading="lazy"{{/if}}
+  <a class="gh-card-link" href="{{url}}">
+    {{#if feature_image}}
+    <div class="post-card">
+      <div class="toprow">
+        <div class="topline-left">
+          <img src="/static/meberleftline.png" alt="" />
+        </div>
+        <div class="post-card-header">
+          <picture class="gh-card-picture">
+            <source srcset="
+                {{img_url feature_image size=" xxs" format="avif" }} 30w, {{img_url feature_image size="xs"
+              format="avif" }} 100w, {{img_url feature_image size="s" format="avif" }} 300w, {{img_url feature_image
+              size="m" format="avif" }} 600w, {{img_url feature_image size="l" format="avif" }} 1200w, {{img_url
+              feature_image size="xl" format="avif" }} 2000w" {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"
+              {{else}}sizes="(min-width: 800px) 100vw, 700px" {{/if}} type="image/avif" {{^if @first}}loading="lazy"
+              {{/if}}>
+            <source srcset="
+                {{img_url feature_image size=" xxs" format="webp" }} 30w, {{img_url feature_image size="xs"
+              format="webp" }} 100w, {{img_url feature_image size="s" format="webp" }} 300w, {{img_url feature_image
+              size="m" format="webp" }} 600w, {{img_url feature_image size="l" format="webp" }} 1200w, {{img_url
+              feature_image size="xl" format="webp" }} 2000w" {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"
+              {{else}}sizes="(min-width: 800px) 100vw, 700px" {{/if}} type="image/webp" {{^if @first}}loading="lazy"
+              {{/if}}>
+            <img srcset="
+                {{img_url feature_image size=" xxs"}} 30w, {{img_url feature_image size="xs" }} 100w, {{img_url
+              feature_image size="s" }} 300w, {{img_url feature_image size="m" }} 600w, {{img_url feature_image size="l"
+              }} 1200w, {{img_url feature_image size="xl" }} 2000w" {{^if
+              @first}}sizes="(min-width: 1200px) 1200px, 100vw)" {{else}}sizes="(min-width: 800px) 100vw, 700px" {{/if}}
+              src="{{img_url feature_image size=" m"}}"
+              alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" class="gh-card-image" {{^if
+              @first}}loading="lazy" {{/if}}>
+          </picture>
+        </div>
+      </div>
 
-              >
-              <img
-                srcset="
-                {{img_url feature_image size="xxs"}} 30w,
-                {{img_url feature_image size="xs"}} 100w,
-                {{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1200w,
-                {{img_url feature_image size="xl"}} 2000w"
-                {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
-                src="{{img_url feature_image size="m"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                class="gh-card-image"
-                {{^if @first}}loading="lazy"{{/if}}
-              >
-            </picture>
-        {{/if}}
-  
-    </a>
+      <div class="post-card-content">
+        <div class="post-card-article">{{title}}</div>
+        <div class="post-card-article">{{excerpt}}</div>
+        <div class="post-card-article">
+          <div class="post-card-footer">
+            <div>
+              作者名稱
+            </div>
+            <div>
+              YYYY/MM/DD
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    {{/if}}
+  </a>
+
+  <style>
+    .post-card-article {
+      font-size: 14px;
+      color: #42403D;
+      font-weight: 400;
+      font-family: 'Noto Sans TC', sans-serif;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    .post-card-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .toprow {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .postRow {
+      margin-top: 5%;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .swiper-container-card {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .post-card {
+      width:
+        304px;
+      height: 317px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 10px;
+    }
+
+    .post-card-header {
+      padding: 7px;
+      text-align: center;
+      flex: 5;
+      background-color: #D9D9D9;
+      border-radius: 20px;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px 0 15px;
+      }
+    }
+  </style>
 </article>

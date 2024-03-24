@@ -1,932 +1,120 @@
-{{!< default}} <!DOCTYPE html>
-  <html lang="{{@site.locale}}">
+{{!< default}}<!DOCTYPE html>
+  </default>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/assets/index.css" />
+  <link rel="stylesheet" href="/assets/header.css" />
+  <link rel="stylesheet" href="/assets/homepage.css" />
+  <link rel="stylesheet" href="/assets/contentpage.css" />
+  <link rel="stylesheet" href="/assets/consult.css" />
+  <link rel="stylesheet" href="/assets/copyright.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <article class="gh-article {{post_class}} gh-post">
+    <div class="gh-container">
 
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/index.css" />
-    <link rel="stylesheet" href="/assets/header.css" />
-    <link rel="stylesheet" href="/assets/homepage.css" />
-    <link rel="stylesheet" href="/assets/contentpage.css" />
-    <link rel="stylesheet" href="/assets/consult.css" />
-    <link rel="stylesheet" href="/assets/copyright.css" />
-
-
-    <script src="{{asset " built/index.js"}}" defer></script>
-    <title>{{meta_title}}</title>
-  </head>
-
-  <body>
-    <div class="StartBiz">
-      <div class="gh-container">
+      <div class="postRow">
+        <h1 class="post-header-front post-header-h1">精選文章</h1>
       </div>
-      {{!-- Homepage --}}
-      <div class="hp-container">
-        <div class="container">
-          <!-- 電腦 -->
-          <div class="hp-left">
-            <div class="mainrightcorner">
-              <img src="/static/MainrightCorner.png" alt="">
-            </div>
-            <div class="hp-title">
-              <h1>START MY</h1>
-              <h1>BUSINESS</h1>
-            </div>
-            <p>STARTBIZ幫你創業的好夥伴</p>
-            <div class="mainleftcorner">
-              <img src="/static/MainleftCorner.png" alt="">
-            </div>
-            <div class="hp-buttons">
-              <button class="hp-yellow-btn">線上諮詢</button>
-              <button class="hp-green-btn">加入 LINE 好友</button>
-            </div>
-          </div>
-          <div class="hp-right">
-            <img src="/static/home-image.png" alt="大蜜蜂" />
-          </div>
-
-          <!-- 手機 -->
-          <div class="hp-mobile">
-            <div class="hp-title">
-              <div class="title-texts">
-                <h1>START</h1>
-                <h1>MY</h1>
-              </div>
-              <div class="right-corner-container">
-                <img src="/static/mobilerightcorner.png" alt="右上" />
-              </div>
-            </div>
-
-            <div class="hp-images">
-              <img class="bee-image" src="/static/home-image.png" alt="大蜜蜂" />
-            </div>
-            <img src="/static/mobileleftcorner.png" alt="左下" />
-
-
-          </div>
-        </div>
+      <div class="row">
+        <div class="post-card">
+          {{#foreach posts}}
+          {{> "post-card"}}
+          {{/foreach}}</div>
 
       </div>
-
-      <img class="index-leftflower" src="/static/Mainleef.png" alt="左邊的花" />
-      <img class="index-leftSflower" src="/static/MainSleef.png" alt="左邊的花" />
-      <img class="mobilego" src="/static/mobilego.png" alt="左邊的花" />
-      <img class="mobileleftflower" src="/static/mobileleftflower.png" alt="左邊的花" />
-      {{!-- <img class="index-rightflower" src="/static/rightflower.png" alt="左邊的花" /> --}}
-
-      {{!-- Contentpage --}}
-
-      <div class="second" id="about-section">
-        <div class="contentpage">
-          <div class="bug-container">
-            <div class="greenbug-container">
-              <img src="/static/greenbugright.png" alt="第一張圖" />
-            </div>
-            <div class="redbug-container">
-              <img src="/static/redbugleft.png" alt="第二張圖" />
-            </div>
-          </div>
-          <div class="bee-wrapper">
-            <img src="/static/workbee.png" alt="工作蜜蜂" />
-          </div>
-
-          <div class="slogan">
-            <div class="left-image">
-              <img src="/static/leftcorner.png" alt="Left Image">
-            </div>
-            <div class="text">
-              <p>STARTBIZ幫你創</p>
-              <h1>一站式創業顧問服務</h1>
-            </div>
-            <div class="right-image">
-              <img src="/static/rightcorner.png" alt="Right Image">
-            </div>
-          </div>
-
-          <div class="image-wrapper">
-            <img src="/static/haxgon.png" alt="第二張圖" />
-          </div>
-          <div class="image-wrapper-PC">
-            <img src="/static/phone.png" alt="第一張圖" />
-          </div>
-
-          <div class="index-write main-container">
-            <div class="index-write inner-container">
-              <div class="index-write content-container">
-                <div class="index-write section" style="background: #A4C3D0;">
-                  <div class="index-write block">
-                    <div class="index-write block-container">
-                      {{!-- <div class="index-write image-block"></div> --}}
-                      <div class="score-wrapper">
-                        <div class="st-box">
-                          <div class="st-row">
-                            {{#foreach posts}}
-                            {{> "post-card"}}
-                            {{/foreach}}
-                          </div>
-                          <div class="st-row">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="index-write text-block"> {{#foreach posts}}
-                        {{> "post-card-content"}}
-                        {{/foreach}}</div>
-                    </div>
-                  </div>
-                  <div class="index-write block">
-                    <div class="index-write block-container">
-                      <div class="index-write text-block">照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述</div>
-                      <div class="index-write image-block"></div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="index-write sidebar">
-                  <div class="index-write number-block">
-                    <img src="/static/60plus.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="index-write main-container">
-            <div class="index-write inner-container">
-              <div class="index-write content-container">
-                <div class="index-write section" style="background: #A4C3D0;">
-                  <div class="index-write block">
-                    <div class="index-write block-container">
-                      {{!-- <div class="index-write image-block"></div> --}}
-                      <div class="score-wrapper">
-                        <div class="st-box">
-                          <div class="st-row">
-                            {{#foreach posts}}
-                            {{> "post-card"}}
-                            {{/foreach}}
-                          </div>
-                          <div class="st-row">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="index-write text-block"> {{#foreach posts}}
-                        {{> "post-card-content"}}
-                        {{/foreach}}</div>
-                    </div>
-                  </div>
-                  <div class="index-write block">
-                    <div class="index-write block-container">
-                      <div class="index-write text-block">照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述</div>
-                      <div class="index-write image-block"></div>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="index-write sidebar">
-                  <div class="index-write number-block">
-                    <img src="/static/60plus.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="MB-Phone-left">
-            <img src="/static/Mobile-phone-left.png" alt="" style="transform: translateX(-37px);">
-          </div>
-          <div class="MB-Phone-Score" style="margin-top: 85%;">
-            <div style="text-align: center; color: #4A7688; font-size: 36px; font-family: Noto Sans TC; font-weight: 900; line-height: 45px; word-wrap: break-word">團隊里程碑</div>
-            <div style="text-align: center; color: #C4D6DE; font-size: 48px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">RESULT</div>
-          </div>
-          <div class="MB-write-content"
-            style="width: 300px; height: 882px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-            <div class="MB-write-content" class="MB-write-content" style="width: 300px; height: 882px; position: relative">
-              <div class="MB-write-content"
-                style="width: 300px; height: 795px; left: 0px; top: 87px; position: absolute; background: #A4C3D0; border-radius: 40px">
-              </div>
-              <div style="width: 115px; height: 115px; left: 91px; top: 0px; position: absolute">
-                <div
-                  style="left: 22px; top: 61px; position: absolute; text-align: center; color: #42403D; font-size: 18px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                  專欄文章</div>
-                <div
-                  style="left: 25px; top: 20px; position: absolute; text-align: center; color: #4A7688; font-size: 36px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                  60</div>
-                <div
-                  style="left: 81px; top: 27px; position: absolute; text-align: center; color: #A4C3D0; font-size: 18px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                  +</div>
-              </div>
-              <div style="width: 256px; height: 728px; left: 22px; top: 122px; position: absolute">
-                <div
-                  style="width: 256px; height: 210px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 40px">
-                </div>
-                <div
-                  style="width: 256px; height: 210px; left: 0px; top: 382px; position: absolute; background: #D9D9D9; border-radius: 40px">
-                </div>
-                <div
-                  style="width: 242px; height: 116px; left: 7px; top: 228px; position: absolute; color: white; font-size: 20px; font-family: Noto Sans TC; font-weight: 500; word-wrap: break-word">
-                  照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述</div>
-                <div
-                  style="width: 242px; height: 116px; left: 7px; top: 612px; position: absolute; color: white; font-size: 20px; font-family: Noto Sans TC; font-weight: 500; word-wrap: break-word">
-                  照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述</div>
-              </div>
-            </div>
-          </div>
-          <div class="MB-write-content"
-            style="width: 300px; height: 882px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-            <div class="MB-write-content" style="width: 300px; height: 882px; position: relative">
-              <div
-                style="width: 300px; height: 795px; left: 0px; top: 87px; position: absolute; background: #A4C3D0; border-radius: 40px">
-              </div>
-              <div style="width: 115px; height: 115px; left: 91px; top: 0px; position: absolute">
-                <div
-                  style="left: 22px; top: 61px; position: absolute; text-align: center; color: #42403D; font-size: 18px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                  專欄文章</div>
-                <div
-                  style="left: 25px; top: 20px; position: absolute; text-align: center; color: #4A7688; font-size: 36px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                  60</div>
-                <div
-                  style="left: 81px; top: 27px; position: absolute; text-align: center; color: #A4C3D0; font-size: 18px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                  +</div>
-              </div>
-              <div style="width: 256px; height: 728px; left: 22px; top: 122px; position: absolute">
-                <div
-                  style="width: 256px; height: 210px; left: 0px; top: 0px; position: absolute; background: #D9D9D9; border-radius: 40px">
-                </div>
-                <div
-                  style="width: 256px; height: 210px; left: 0px; top: 382px; position: absolute; background: #D9D9D9; border-radius: 40px">
-                </div>
-                <div
-                  style="width: 242px; height: 116px; left: 7px; top: 228px; position: absolute; color: white; font-size: 20px; font-family: Noto Sans TC; font-weight: 500; word-wrap: break-word">
-                  照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述</div>
-                <div
-                  style="width: 242px; height: 116px; left: 7px; top: 612px; position: absolute; color: white; font-size: 20px; font-family: Noto Sans TC; font-weight: 500; word-wrap: break-word">
-                  照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述照片敘述</div>
-              </div>
-            </div>
-          </div>
-          <div class="MB-write-content" style="width: 300px; height: 484px; position: relative">
-            <div style="width: 300px; height: 484px; left: 0px; top: 0px; position: absolute">
-              <div
-                style="width: 300px; height: 402px; left: 0px; top: 82px; position: absolute; background: #A4C3D0; border-radius: 40px">
-              </div>
-              <div style="width: 250px; height: 235px; left: 24px; top: 228px; position: absolute">
-                <div
-                  style="width: 250px; height: 130px; left: 0px; top: 0px; position: absolute; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                </div>
-              </div>
-              <div style="width: 115px; height: 115px; left: 91px; top: 0px; position: absolute">
-                <div style="width: 85px; height: 67px; left: 17px; top: 20px; position: absolute">
-                  <div
-                    style="left: 6px; top: 41px; position: absolute; text-align: center; color: #42403D; font-size: 18px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    顧問服務</div>
-                  <div
-                    style="left: 0px; top: 0px; position: absolute; text-align: center; color: #4A7688; font-size: 36px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                    100</div>
-                  <div
-                    style="left: 72px; top: 7px; position: absolute; text-align: center; color: #A4C3D0; font-size: 18px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                    +</div>
-                </div>
-              </div>
-            </div>
-            <div
-              style="width: 130px; height: 130px; left: 84px; top: 122px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-              <div style="width: 77px; height: 79.26px; position: relative">
-                <div
-                  style="width: 21.53px; height: 21.65px; left: 0px; top: 0px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 21.25px; height: 23.34px; left: 21.70px; top: 4.07px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 7.24px; height: 8.94px; left: 9.26px; top: 13.88px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 14.71px; height: 21.13px; left: 5.61px; top: 19.23px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 0.14px; height: 0.15px; left: 8.66px; top: 23.43px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 0.55px; height: 0.76px; left: 8px; top: 23.76px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 0.13px; height: 0.10px; left: 8.17px; top: 24.52px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 1.71px; height: 10.21px; left: 31.25px; top: 24.71px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 0.06px; height: 0.35px; left: 32.36px; top: 34.99px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 0.13px; height: 0.29px; left: 32.30px; top: 35.43px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 4.19px; height: 20.13px; left: 30.19px; top: 35.80px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 0.13px; height: 0.19px; left: 33.01px; top: 38.25px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 8.88px; height: 8px; left: 54.92px; top: 22.80px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 33.61px; height: 17.31px; left: 43.39px; top: 30.66px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 26.44px; height: 41.32px; left: 49.09px; top: 37.95px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 10.45px; height: 12.95px; left: 51.02px; top: 39.90px; position: absolute; background: black">
-                </div>
-                <div
-                  style="width: 27.67px; height: 13.83px; left: 42.42px; top: 61.39px; position: absolute; background: black">
-                </div>
-              </div>
-            </div>
-          </div>
-          <img class="MB-write-content" src="/static/Mobile-DHand.png" alt="">
-          {{!-- 手機板服務項目 --}}
-          <div class="MB-serve">
-            <div
-              style="width: 320px; height: 1269px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 320px; height: 1269px; position: relative">
-                <div
-                  style="left: 75px; top:-50px; position: absolute; text-align: center; color: white; font-size: 36px; font-family: Noto Sans TC; font-weight: 900; line-height: 45px; word-wrap: break-word">
-                  服務項目</div>
-                <div
-                  style="text-align: center; color: #E8F2F6; font-size: 48px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                  service</div>
-                <div style="width: 320px; height: 161px; left: 0px; top: 143px; position: absolute">
-                  <div
-                    style="width: 320px; height: 161px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 8px 16px #80A5B5; border-radius: 26px">
-                  </div>
-                  <div
-                    style="left: 171px; top: 23px; position: absolute; color: #4A7688; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    稅務行政</div>
-                  <div
-                    style="width: 120px; left: 167px; top: 75px; position: absolute; color: #42403D; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    為您擬定健全的稅務管理，並與時俱進配合相關法令，成為與稅務單位的橋樑。</div>
-                  <div
-                    style="width: 59px; height: 59px; left: 83px; top: 33px; position: absolute; background: #E8F2F6; border-radius: 9999px">
-                  </div>
-                  <img
-                    style="width: 114px; height: 114px; left: 24.05px; top: 24.96px; position: absolute; transform: rotate(-0.96deg); transform-origin: 0 0"
-                    src="/static/seal.png" />
-                  <div
-                    style="width: 119px; height: 0px; left: 168px; top: 66px; position: absolute; border: 3px #E8F2F6 solid">
-                  </div>
-                  <div
-                    style="width: 17px; height: 17px; left: 36px; top: 108px; position: absolute; background: #E8F2F6; border-radius: 9999px">
-                  </div>
-                </div>
-                <div style="width: 320px; height: 161px; left: 0px; top: 336px; position: absolute">
-                  <div
-                    style="width: 320px; height: 161px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 8px 16px #80A5B5; border-radius: 26px">
-                  </div>
-                  <div
-                    style="left: 40px; top: 21px; position: absolute; color: #FAC02C; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    公司會計</div>
-                  <div
-                    style="width: 120px; left: 36px; top: 73px; position: absolute; color: #42403D; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    團隊積累四大會計師事務所的專業實力，協助創業初期的你掌握財會全局，建立穩健基礎。</div>
-                  <div
-                    style="width: 66px; height: 66px; left: 165px; top: 63px; position: absolute; background: #FDF2D6; border-radius: 9999px">
-                  </div>
-                  <img style="width: 121px; height: 121px; left: 179px; top: 12px; position: absolute"
-                    src="static/money.png" />
-                  <div
-                    style="width: 119px; height: 0px; left: 37px; top: 64px; position: absolute; border: 3px #FDF2D6 solid">
-                  </div>
-                  <div
-                    style="width: 16px; height: 16px; left: 230px; top: 121px; position: absolute; background: #FDF2D6; border-radius: 9999px">
-                  </div>
-                </div>
-                <div style="width: 320px; height: 161px; left: 0px; top: 529px; position: absolute">
-                  <div
-                    style="width: 320px; height: 161px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 8px 16px #80A5B5; border-radius: 26px">
-                  </div>
-                  <div
-                    style="left: 171px; top: 23px; position: absolute; color: #4A7688; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    法律諮詢</div>
-                  <div
-                    style="width: 120px; left: 167px; top: 75px; position: absolute; color: #42403D; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    無論對內的管理或對外的合作，完整全面的保障公司相關權益。</div>
-                  <div
-                    style="width: 60px; height: 60px; left: 90px; top: 76px; position: absolute; background: #E8F2F6; border-radius: 9999px">
-                  </div>
-                  <img
-                    style="width: 107px; height: 107px; left: 14.98px; top: 39.10px; position: absolute; transform: rotate(-8.12deg); transform-origin: 0 0"
-                    src="/static/book.png" />
-                  <div
-                    style="width: 13px; height: 13px; left: 110px; top: 54px; position: absolute; background: #E8F2F6; border-radius: 9999px">
-                  </div>
-                  <div
-                    style="width: 119px; height: 0px; left: 168px; top: 66px; position: absolute; border: 3px #E8F2F6 solid">
-                  </div>
-                </div>
-                <div style="width: 320px; height: 161px; left: 0px; top: 722px; position: absolute">
-                  <div
-                    style="width: 320px; height: 161px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 8px 16px #80A5B5; border-radius: 26px">
-                  </div>
-                  <div
-                    style="left: 40px; top: 23px; position: absolute; color: #FAC02C; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    品牌行銷</div>
-                  <div
-                    style="width: 120px; left: 36px; top: 75px; position: absolute; color: #42403D; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    橋接企業品牌進入市場大眾視野，有效將品牌轉化爲有形獲益。</div>
-                  <div
-                    style="width: 78px; height: 78px; left: 218px; top: 23px; position: absolute; background: #FDF2D6; border-radius: 9999px">
-                  </div>
-                  <div
-                    style="width: 16px; height: 16px; left: 269px; top: 110px; position: absolute; background: #FDF2D6; border-radius: 9999px">
-                  </div>
-                  <div
-                    style="width: 119px; height: 0px; left: 37px; top: 66px; position: absolute; border: 3px #FDF2D6 solid">
-                  </div>
-                  <img
-                    style="width: 98px; height: 98px; left: 167.60px; top: 39.44px; position: absolute; transform: rotate(-1.66deg); transform-origin: 0 0"
-                    src="/static/laba.png" />
-                </div>
-                <div style="width: 320px; height: 161px; left: 0px; top: 915px; position: absolute">
-                  <div
-                    style="width: 320px; height: 161px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 8px 16px #80A5B5; border-radius: 26px">
-                  </div>
-                  <div
-                    style="left: 171px; top: 23px; position: absolute; color: #4A7688; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    企業網站</div>
-                  <div
-                    style="width: 120px; left: 167px; top: 75px; position: absolute; color: #42403D; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    資訊時代網站、APP 是業務與管理的重要平台，從開發到維運提供安全可靠穩定的系統。</div>
-                  <div
-                    style="width: 63px; height: 63px; left: 86px; top: 76px; position: absolute; background: #E8F2F6; border-radius: 9999px">
-                  </div>
-                  <img style="width: 113px; height: 113px; left: 22px; top: 30px; position: absolute"
-                    src="/static/car.png" />
-                  <div
-                    style="width: 17px; height: 17px; left: 103px; top: 31px; position: absolute; background: #E8F2F6; border-radius: 9999px">
-                  </div>
-                  <div
-                    style="width: 119px; height: 0px; left: 168px; top: 66px; position: absolute; border: 3px #E8F2F6 solid">
-                  </div>
-                </div>
-                <div style="width: 320px; height: 161px; left: 0px; top: 1108px; position: absolute">
-                  <div
-                    style="width: 320px; height: 161px; left: 0px; top: 0px; position: absolute; background: white; box-shadow: 4px 8px 16px #80A5B5; border-radius: 26px">
-                  </div>
-                  <div
-                    style="left: 40px; top: 23px; position: absolute; color: #FAC02C; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    商業顧問</div>
-                  <div
-                    style="width: 120px; left: 36px; top: 75px; position: absolute; color: #42403D; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    透過完整的市場研究，扎實打好營運基石，協助公司挖掘與解決核心問題。</div>
-                  <div
-                    style="width: 89px; height: 89px; left: 212px; top: 24px; position: absolute; background: #FDF2D6; border-radius: 9999px">
-                  </div>
-                  <img
-                    style="width: 119px; height: 119px; left: 164.49px; top: 33.62px; position: absolute; transform: rotate(-2.47deg); transform-origin: 0 0"
-                    src="/static/target.png" />
-                  <div
-                    style="width: 14px; height: 14px; left: 241px; top: 120px; position: absolute; background: #FDF2D6; border-radius: 9999px">
-                  </div>
-                  <div
-                    style="width: 119px; height: 0px; left: 37px; top: 66px; position: absolute; border: 3px #FDF2D6 solid">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          {{!-- 手機板服務項目下面的蜜蜂 --}}
-          <div class="MB-beeandleef" style="height: 900px;">
-            <img style="width: 250px;   transform-origin: 0 0" src="/static/mbcontentbee.png" />
-            <img style="transform: translateX(-20px); height: 371px;  transform-origin: 0 0"
-              src="/static/mbcontentleftflower.png" />
-            <img
-              style="transform: translateX(-80px);transform: translateY(-85%) translateX(50%);  transform-origin: 0 0"
-              src="/static/mbcontentrightflower.png" />
-            <img style="width: 197px;transform: translateY(-305%) translateX(60%);transform-origin: 0 0"
-              src="/static/rightmoveleftbee.png">
-          </div>
-          {{!-- 下面的字 --}}
-          <div class="MB-fontUnder"
-            style="color: black; font-size: 48px; font-family: Ultra; font-weight: 400; line-height: 45px; word-wrap: break-word">
-            START<br />MY<br />BUSINESS</div>
-          {{!-- 手機板方案與價格 --}}
-          <div class="MB-optionandpay" style="margin-top: 13%;width: 320px;height: 776px;position: relative" class="MB-option">
-            <div
-              style="width: 320px; height: 776px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 320px; height: 776px; position: relative">
-                <div
-                  style="left: 43px; top: 54px; position: absolute; text-align: center; color: #C4D6DE; font-size: 48px; font-family: Ultra; font-weight: 400; text-transform: uppercase; line-height: 45px; word-wrap: break-word">
-                  OPTION</div>
-                <div
-                  style="left: 71px; top: 0px; position: absolute; text-align: center; color: #4A7688; font-size: 36px; font-family: Noto Sans TC; font-weight: 900; line-height: 45px; word-wrap: break-word">
-                  方案與價格</div>
-                <div style="width: 320px; height: 196px; left: 0px; top: 144px; position: absolute">
-                  <div
-                    style="width: 320px; height: 187px; left: 0px; top: 9px; position: absolute; background: white; box-shadow: 4px 8px 16px #C4D6DE; border-radius: 15px">
-                  </div>
-                  <div
-                    style="width: 320px; height: 30px; left: 0px; top: 166px; position: absolute; opacity: 0.80; background: #A4C3D0; border-top-left-radius: 15px; border-top-right-radius: 15px">
-                  </div>
-                  <div
-                    style="width: 103.53px; left: 28.24px; top: 29px; position: absolute; color: #4A7688; font-size: 18px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    方案名稱 A</div>
-                  <div
-                    style="width: 34.12px; left: 261.18px; top: 36px; position: absolute; text-align: right; color: #A19C95; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    元/月</div>
-                  <div
-                    style="width: 50.59px; left: 210px; top: 22px; position: absolute; text-align: right; color: #42403D; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    999</div>
-                  <div
-                    style="width: 269px; height: 70px; left: 26px; top: 78px; position: absolute; color: #A4C3D0; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    方案內容描述，方案內容描述方案內容描述方案內容描述內容描述，方案內容描述，方案內容描述方案內容描述方案內容描述內容描述，方案內容描述，方案內容描述。</div>
-                  <div
-                    style="width: 261.18px; height: 0px; left: 29.41px; top: 67px; position: absolute; border: 3px #E8F2F6 solid">
-                  </div>
-                  <div
-                    style="width: 19px; height: 72.67px; left: 18.82px; top: 19px; position: absolute; transform-origin: 0 0">
-                    <div
-                      style="width: 19px; height: 72.67px; left: 0px; top: 0px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; background: #A4C3D0; border-radius: 5px">
-                    </div>
-                    <div
-                      style="width: 47.06px; left: 12.94px; top: -18px; position: absolute; text-align: center; color: white; font-size: 10px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                      新手優惠</div>
-                  </div>
-                  <div
-                    style="width: 57.65px; left: 131.76px; top: 173px; position: absolute; text-align: center; color: white; font-size: 10px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    了解更多 ></div>
-                </div>
-                <div style="width: 320px; height: 196px; left: 0px; top: 362px; position: absolute">
-                  <div
-                    style="width: 320px; height: 187px; left: 0px; top: 9px; position: absolute; background: white; box-shadow: 4px 8px 16px #C4D6DE; border-radius: 15px">
-                  </div>
-                  <div
-                    style="width: 104.71px; left: 28.24px; top: 29px; position: absolute; color: #4A7688; font-size: 18px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    方案名稱 B</div>
-                  <div
-                    style="width: 34.12px; left: 261.18px; top: 36px; position: absolute; text-align: right; color: #A19C95; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    元/月</div>
-                  <div
-                    style="width: 76.47px; left: 185px; top: 22px; position: absolute; text-align: right; color: #42403D; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    2,999</div>
-                  <div
-                    style="width: 269px; height: 70px; left: 26px; top: 78px; position: absolute; color: #A4C3D0; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    方案內容描述，方案內容描述方案內容描述方案內容描述內容描述，方案內容描述，方案內容描述方案內容描述方案內容描述內容描述，方案內容描述，方案內容描述。</div>
-                  <div
-                    style="width: 261.18px; height: 0px; left: 29.41px; top: 67px; position: absolute; border: 3px #E8F2F6 solid">
-                  </div>
-                  <div
-                    style="width: 19px; height: 72.67px; left: 18.82px; top: 19px; position: absolute; transform-origin: 0 0">
-                    <div
-                      style="width: 19px; height: 72.67px; left: 0px; top: 0px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; background: #FFAB99; border-radius: 5px">
-                    </div>
-                    <div
-                      style="width: 47.06px; left: 12.94px; top: -18px; position: absolute; text-align: center; color: white; font-size: 10px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                      熱門推薦</div>
-                  </div>
-                  <div
-                    style="width: 320px; height: 30px; left: 0px; top: 166px; position: absolute; opacity: 0.80; background: #FFAB99; border-top-left-radius: 15px; border-top-right-radius: 15px">
-                  </div>
-                  <div
-                    style="width: 57.65px; left: 131.76px; top: 173px; position: absolute; text-align: center; color: white; font-size: 10px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    了解更多 ></div>
-                </div>
-                <div style="width: 320px; height: 196px; left: 0px; top: 580px; position: absolute">
-                  <div
-                    style="width: 320px; height: 187px; left: 0px; top: 9px; position: absolute; background: white; box-shadow: 4px 8px 16px #C4D6DE; border-radius: 15px">
-                  </div>
-                  <div
-                    style="width: 103.53px; left: 28.24px; top: 29px; position: absolute; color: #4A7688; font-size: 18px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    方案名稱 C</div>
-                  <div
-                    style="width: 34.12px; left: 261.18px; top: 36px; position: absolute; text-align: right; color: #A19C95; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    元/月</div>
-                  <div
-                    style="width: 92.94px; left: 168px; top: 22px; position: absolute; text-align: right; color: #42403D; font-size: 24px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    19,999</div>
-                  <div
-                    style="width: 269px; height: 70px; left: 26px; top: 78px; position: absolute; color: #A4C3D0; font-size: 12px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    方案內容描述，方案內容描述方案內容描述方案內容描述內容描述，方案內容描述，方案內容描述方案內容描述方案內容描述內容描述，方案內容描述，方案內容描述。</div>
-                  <div
-                    style="width: 261.18px; height: 0px; left: 29.41px; top: 67px; position: absolute; border: 3px #E8F2F6 solid">
-                  </div>
-                  <div
-                    style="width: 19px; height: 72.67px; left: 18.82px; top: 19px; position: absolute; transform-origin: 0 0">
-                    <div
-                      style="width: 19px; height: 72.67px; left: 0px; top: 0px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; background: #FAC02C; border-radius: 5px">
-                    </div>
-                    <div
-                      style="width: 47.06px; left: 12.94px; top: -18px; position: absolute; text-align: center; color: white; font-size: 10px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                      頂級方案</div>
-                  </div>
-                  <div
-                    style="width: 320px; height: 30px; left: 0px; top: 166px; position: absolute; opacity: 0.80; background: #FAC02C; border-top-left-radius: 15px; border-top-right-radius: 15px">
-                  </div>
-                  <div
-                    style="width: 57.65px; left: 131.76px; top: 173px; position: absolute; text-align: center; color: white; font-size: 10px; font-family: Noto Sans TC; font-weight: 700; word-wrap: break-word">
-                    了解更多 ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="friend-container">
-            <div class="friend-background"></div>
-            <div class="friend-content">
-              <div class="friend-item">
-                <img src="/static/whiteplus.png" alt="">
-              </div>
-              <div class="friend-item2">
-                <img src="/static/whiteplus.png" alt="">
-              </div>
-              <div class="friend-item3">
-                <img src="/static/whiteplus.png" alt="">
-              </div>
-              <div class="friend-item4">
-                <img src="/static/whiteplus.png" alt="">
-              </div>
-              <div class="friend-partners">
-                <div class="whitecover"><img src="/static/whiteplus.png" alt="">
-                  <div class="friend-partners-text">合作夥伴</div>
-                  <div class="friend-partners-number">100</div>
-                  <div class="friend-partners-plus">+</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <div class="serve-content">
-      <div class="serve">
-        <p>服務項目</p>
-        <h3>SERVICE</h3>
-      </div>
-
-      <div class="card-container card-container-MB">
-        <!-- First Row -->
-        <div class="card">
-          <img src="/static/seal.png" alt="Image 1">
-          <div class="text-content">
-            <h2>稅務行政</h2>
-            <hr>
-            <ul>
-              <li>Point 1</li>
-              <li>Point 2</li>
-              <li>Point 3</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="text-content-yellow">
-            <h2>公司會計</h2>
-            <hr>
-            <ul>
-              <li>Point 1</li>
-              <li>Point 2</li>
-              <li>Point 3</li>
-            </ul>
-          </div>
-          <img src="/static/money.png" alt="Image 1">
-
-        </div>
-
-      </div>
-      <div class="card-container">
-        <!-- First Row -->
-        <div class="card">
-
-          <img src="/static/book.png" alt="Image 1">
-          <div class="text-content">
-            <h2>法律諮詢</h2>
-            <hr>
-            <ul>
-              <li>Point 1</li>
-              <li>Point 2</li>
-              <li>Point 3</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-          <div class="text-content-yellow">
-            <h2>品牌行銷</h2>
-            <hr>
-            <ul>
-              <li>Point 1</li>
-              <li>Point 2</li>
-              <li>Point 3</li>
-            </ul>
-          </div>
-          <img src="/static/laba.png" alt="Image 1">
-        </div>
-
-      </div>
-      <div class="card-container">
-        <!-- First Row -->
-
-        <div class="card">
-          <img src="/static/car.png" alt="Image 1">
-          <div class="text-content">
-            <h2>企業網站</h2>
-            <hr>
-            <ul>
-              <li>Point 1</li>
-              <li>Point 2</li>
-              <li>Point 3</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card">
-
-          <div class="text-content">
-            <h2>商業顧問</h2>
-            <hr>
-            <ul>
-              <li>Point 1</li>
-              <li>Point 2</li>
-              <li>Point 3</li>
-            </ul>
-          </div>
-          <img src="/static/target.png" alt="Image 1">
-        </div>
-      </div>
-
 
     </div>
-    <div class="slogan-center-container">
-      <div class="center-leef">
-        <img src="/static/center-leef.png" alt="">
-      </div>
-      <div class="slogan-center-text">
-        START<br />
-        MY<br />
-        BUSINESS
-      </div>
-      <div class="center-left-bee">
-        <img src="/static/center-bee.png" alt="">
-      </div>
-      <div class="center-leefS-right">
-        <img src="/static/center-leefS-right.png" alt="">
-      </div>
-      <div class="center-leefM-right">
-        <img src="/static/center-leef-right.png" alt="">
-      </div>
-      <div class="center-right-bee">
-        <img src="/static/right-bee.png" alt="">
-      </div>
-      <div class="center-left-bee">
-        <img src="/static/center-bee.png" alt="">
-      </div>
-    </div>
-    </div>
-
-    <div class="option-content">
+  </article>
 
 
 
-      {{!-- <div class="mobile-content">
-        <div class="mobile-content-bee">
-          <img src="/static/mbcontentbee.png" alt="Bee">
-        </div>
-        <div class="mobile-content-flowers">
-          <img src="/static/mbcontentleftflower.png" alt="Left Flower">
-          <img src="/static/mbcontentrightflower.png" alt="Right Flower">
-        </div>
-        <div class="mobile-content-movingbee">
-          <img src="/static/rightmoveleftbee.png" alt="Moving Bee">
-        </div>
-      </div>
+  <style>
+    .post-card-article {
+      font-size: 14px;
+      color: #42403D;
+      font-weight: 400;
+      font-family: 'Noto Sans TC', sans-serif;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
-      <div class="mobile-slogan">
-        <h1>START</h1>
-        <h1>MY</h1>
-        <h1>BUSINESS</h1>
-      </div> --}}
 
-      <div class="option" id="pay">
-        <p>方案與價格</p>
-        <h3>OPTION</h3>
-      </div>
+    .post-card-footer {
+      display: flex;
+      justify-content: space-between;
+    }
 
-      <div class="paycard-container container">
-        <div class="new-card">
-          <div class="new-card-header">
-            <p>新手專案</p>
-          </div>
-          <div class="new-card-title">
-            <p>方案名稱A</p>
-            <span class="price">
-              <h5>999</h5>
-              <p>元/月</p>
-            </span>
-          </div>
-          <div class="new-card-content">
-            <p>內容內容 內容內容 內容內容 內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
-          </div>
-          <div class="new-learn-more">
-            <p>了解更多</p>
-          </div>
-        </div>
+    .toprow {
+      display: flex;
+      justify-content: space-between;
+    }
 
-        <div class="new-card">
-          <div class="new-card-header" style="background-color:#FFAB99">
-            <p>新手專案</p>
-          </div>
-          <div class="new-card-title">
-            <p>方案名稱A</p>
-            <span class="price">
-              <h5>999</h5>
-              <p>元/月</p>
-            </span>
-          </div>
-          <div class="new-card-content">
-            <p>內容內容 內容內容 內容內容 內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
-          </div>
-          <div class="new-learn-more" style="background-color:#FFAB99">
-            <p>了解更多</p>
-          </div>
-        </div>
-        <div class="new-card">
-          <div class="new-card-header" style="background-color:#FAC02C">
-            <p>新手專案</p>
-          </div>
-          <div class="new-card-title">
-            <p>方案名稱A</p>
-            <span class="price">
-              <h5>999</h5>
-              <p>元/月</p>
-            </span>
-          </div>
-          <div class="new-card-content">
-            <p>內容內容 內容內容 內容內容 內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
-          </div>
-          <div class="new-learn-more" style="background-color:#FAC02C">
-            <p>了解更多</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    .postRow {
+      margin-top: 5%;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .swiper-container-card {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .post-card {
+      width:
+        304px;
+      height: 317px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 10px;
+    }
+
+    .post-card-header {
+      padding: 15px;
+      text-align: center;
+      flex: 5;
+      background-color: #D9D9D9;
+      border-radius: 20px;
+    }
+
+    .post-card-content {
+      width: 100%;
+      height: 120px;
+      /* 兩行文本高度，根據需要調整
+  */
+      overflow: hidden;
+      background-color: #fff;
+    }
 
 
 
-    {{!-- Consult --}}
-    <div class="inquiry-container" id="online">
-      <div class="consultpage">
-        <div class="form-container">
-          <h1>線上洽詢</h1>
-          <h2>INQUIRY</h2>
-          <form action="#" method="post">
-            <div class="input-group">
-              <div class="input-wrapper">
-                <label for="companyName">公司名稱</label>
-                <input type="text" id="companyName" />
-              </div>
-              <div class="input-wrapper">
-                <label for="businessType">業務類別</label>
-                <input type="text" id="businessType" />
-              </div>
-            </div>
-            <div class="input-group textareamb">
-              <div class="input-wrapper">
-                <label for="companyName">職稱/聯絡人姓名</label>
-                <input type="text" id="companyName" />
-              </div>
-              <div class="input-wrapper">
-                <label for="businessType">聯絡信箱</label>
-                <input type="text" id="businessType" />
-              </div>
-            </div>
-            <label class="textareamt" for="description">方案需求或問題描述</label>
-            <textarea rows="6" cols="50" id="description" name="description" placeholder="輸入方案需求或問題描述"></textarea>
-            <button class="consult-buttom" type="submit">送出</button>
-          </form>
-        </div>
-        <div class="image-container">
-          <img src="/static/linefriend.png" alt="成績" />
-        </div>
-      </div>
-    </div>
+    @media (max-width: 768px) {
 
-    {{!-- Copyright --}}
+      .row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px 0 15px;
+      }
+    }
+  </style>
 
-    </div>
 
-    {{!-- Header's Script --}}
-    <script>
-      const isOpen = ref(false);
 
-      const toggleNav = () => {
-        isOpen.value = !isOpen.value;
-      };
-    </script>
-  </body>
+  <script>
 
-  </html>
+  </script>

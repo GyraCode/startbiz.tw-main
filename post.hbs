@@ -1,9 +1,7 @@
-{{!< default}}
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+{{!< default}} <!DOCTYPE html>
+  </default>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -16,16 +14,16 @@
   <link rel="stylesheet" href="/assets/copyright.css" />
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-{{#post}}
+  {{#post}}
 
 
 
-<article class="gh-article {{post_class}} gh-post">
+  <article class="gh-article {{post_class}} gh-post">
     <div class="gh-container ">
-           <header class="gh-header gh-canvas">
-       
+      <header class="gh-header gh-canvas">
+
         <h1 class="gh-title">{{title}}</h1>
 
         {{#if custom_excerpt}}
@@ -34,356 +32,315 @@
 
         {{#if feature_image}}
         <figure class="gh-feature-image">
-            <picture>
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="avif"}} 30w,
-                {{img_url feature_image size="xs" format="avif"}} 100w,
-                {{img_url feature_image size="s" format="avif"}} 300w,
-                {{img_url feature_image size="m" format="avif"}} 600w,
-                {{img_url feature_image size="l" format="avif"}} 1200w,
-                {{img_url feature_image size="xl" format="avif"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/avif"
-              >
-              <source 
-                srcset="
-                {{img_url feature_image size="xxs" format="webp"}} 30w,
-                {{img_url feature_image size="xs" format="webp"}} 100w,
-                {{img_url feature_image size="s" format="webp"}} 300w,
-                {{img_url feature_image size="m" format="webp"}} 600w,
-                {{img_url feature_image size="l" format="webp"}} 1200w,
-                {{img_url feature_image size="xl" format="webp"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                type="image/webp"
-              >
-              <img
-                srcset="
-                {{img_url feature_image size="xxs"}} 30w,
-                {{img_url feature_image size="xs"}} 100w,
-                {{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1200w,
-                {{img_url feature_image size="xl"}} 2000w"
-                sizes="(min-width: 1200px) 1200px, 90vw" 
-                src="{{img_url feature_image size="l"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-              >
-            </picture>
-            {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
-            {{/if}}
+          <picture>
+            <source srcset="
+                {{img_url feature_image size=" xxs" format="avif" }} 30w, {{img_url feature_image size="xs"
+              format="avif" }} 100w, {{img_url feature_image size="s" format="avif" }} 300w, {{img_url feature_image
+              size="m" format="avif" }} 600w, {{img_url feature_image size="l" format="avif" }} 1200w, {{img_url
+              feature_image size="xl" format="avif" }} 2000w" sizes="(min-width: 1200px) 1200px, 90vw"
+              type="image/avif">
+            <source srcset="
+                {{img_url feature_image size=" xxs" format="webp" }} 30w, {{img_url feature_image size="xs"
+              format="webp" }} 100w, {{img_url feature_image size="s" format="webp" }} 300w, {{img_url feature_image
+              size="m" format="webp" }} 600w, {{img_url feature_image size="l" format="webp" }} 1200w, {{img_url
+              feature_image size="xl" format="webp" }} 2000w" sizes="(min-width: 1200px) 1200px, 90vw"
+              type="image/webp">
+            <img srcset="
+                {{img_url feature_image size=" xxs"}} 30w, {{img_url feature_image size="xs" }} 100w, {{img_url
+              feature_image size="s" }} 300w, {{img_url feature_image size="m" }} 600w, {{img_url feature_image size="l"
+              }} 1200w, {{img_url feature_image size="xl" }} 2000w" sizes="(min-width: 1200px) 1200px, 90vw"
+              src="{{img_url feature_image size=" l"}}"
+              alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+          </picture>
+          {{#if feature_image_caption}}
+          <figcaption>{{feature_image_caption}}</figcaption>
+          {{/if}}
         </figure>
         {{/if}}
-    </header>
-    <div class="writetitle">
+      </header>
+      <div class="writetitle">
         <div class="leftline"> <img src="/static/writeleftline.png" alt=""></div>
         <div class="righttitle">
-            <div class="writetype">文章類型</div>
-            <div class="maintitle">內容標題內容標題內容標題內容標題內容標題內容標題內容標題內容標題內容標題內容標題</div>
-            <div class="secondtitle">內容副標內容副標內容副標內容副標內容副標內容副標內容副標內容副標內容副標</div>
-            <div class="titlefooter row">
-                <div class="writername">作者姓名|職稱職稱</div>
-                <div class="writedate">YYYY/MM/DD</div>
-            </div>
-            
+          <div class="writetype">文章類型</div>
+          <div class="maintitle">{{title}}</div>
+          <div class="secondtitle">{{excerpt }}</div>
+          <div class="titlefooter row">
+            {{#foreach authors}}
+            <a href="{{url}}" class="writername">{{name}}</a>
+            {{/foreach}}
+            <div class="writedate">{{published_at}}</div>
+          </div>
+
         </div>
-    </div>
-    <div class="write-content">
+      </div>
+      <div class="write-content">
         <div class="quote">
-            <div class="leftcorner-quote">“</div>
-            <div class="quote-content">
-                    用引用引用引用引用引用引用引用引用引用引用引用引用引用
-            </div>
-            <div class="rightcorner-quote">“</div>
+          <div class="leftcorner-quote">“</div>
+          <div class="quote-content">
+            {{Primary_tag }}
+          </div>
+          <div class="rightcorner-quote">“</div>
         </div>
         <div class="wr-content">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum distinctio odit ut aut. Necessitatibus voluptates iste vero adipisci. Numquam, similique totam laborum sequi animi saepe sapiente accusamus velit non debitis!
-            Hic assumenda, iure dicta, facilis nam ipsum sapiente qui ullam quibusdam recusandae ipsam illo. Aspernatur sit magni molestiae similique iure deleniti modi ad placeat, illum sequi enim labore quibusdam omnis!
-            Vel dolores magni maiores sapiente non alias officia tempore in nihil, consectetur accusantium itaque illo quos, repudiandae, esse enim molestiae qui dolorem tempora! Tenetur, dolores non aspernatur exercitationem maxime velit?
-            Aliquid perspiciatis consequatur ad explicabo deserunt recusandae ea omnis officiis cupiditate. Harum ipsum inventore quasi fugit quidem itaque vero ullam? Sapiente voluptatum hic nemo distinctio quas cum culpa eos modi?
-            Eligendi libero autem iste aspernatur adipisci, blanditiis porro! Sint alias illum, corrupti cupiditate, ab maiores laborum error ipsam, odit cumque distinctio ea at provident voluptas tempore assumenda cum et corporis!
-            Consequatur repellendus eum autem doloremque quos voluptas illum nemo enim officiis quod est dolore, sed, soluta natus explicabo molestiae corporis maiores harum ab voluptatum id impedit atque quam ipsum! Magni.
-            Fuga fugiat, accusamus pariatur ipsam maxime exercitationem voluptas nesciunt itaque eos vitae ipsum cumque unde eveniet, repudiandae vel. Est repellat iste vero fuga ipsa pariatur harum id fugit, veniam quaerat.
-            Molestias distinctio nostrum provident corporis eius! Corrupti laboriosam maxime vel, excepturi, laborum magni, totam mollitia modi officia molestiae sunt sapiente sequi ducimus ullam sint voluptatum aut blanditiis tempore natus alias.
-            Reprehenderit dolorem architecto vero voluptatem rem inventore voluptatibus corrupti dolores cupiditate quis consectetur cum temporibus eos laborum, nobis nesciunt ipsum ipsam totam pariatur. Fuga fugit nesciunt laudantium quae, omnis expedita!
-            Fugiat nisi, corrupti quo est impedit cupiditate tempora! Accusamus modi, nesciunt possimus eius ipsa ducimus sit incidunt blanditiis, sint necessitatibus quos consequuntur accusantium suscipit illo, doloremque vitae dolorem veritatis totam!
-            Exercitationem aspernatur sequi tempora excepturi earum nobis at facere esse inventore nesciunt ullam iure impedit in aperiam, optio voluptatem incidunt. Nobis, porro expedita eveniet blanditiis magnam quas iusto assumenda suscipit.
-            Quis consectetur, accusamus cum corporis corrupti minima rem hic debitis magnam perferendis autem quas. Porro repellendus voluptatum, ea tenetur nemo aspernatur error illum libero explicabo est eaque ex accusamus aliquid.
-            Illum nostrum ad cum omnis eaque doloribus tempora ratione voluptatem. Quia maiores deleniti odit aliquam facere sed eum libero sint, non officia ea molestias ducimus, unde velit. Quisquam, optio vero.
-            Ut itaque sapiente deserunt facilis magnam eos. Ipsam expedita ipsa non maiores dolorum provident hic, qui excepturi accusamus possimus consequatur inventore earum, perspiciatis eaque minima quis placeat quia corrupti in.
-            Consequatur eius, accusamus quas suscipit cumque possimus neque libero dicta error natus tenetur quod molestiae ipsa ut delectus aut ab reprehenderit debitis voluptas recusandae eos dolores modi necessitatibus perspiciatis! Placeat.
-            Odit blanditiis quo accusantium impedit doloremque? Sequi quas corporis quam voluptatem quod doloribus adipisci explicabo, officia, dolorum accusamus facere hic officiis ex ullam inventore impedit sed, velit incidunt cumque ipsa.
-            Corrupti aperiam labore quidem praesentium illum omnis distinctio quos nulla, fugit temporibus vitae reprehenderit consectetur deserunt. Sed ab nam voluptas quaerat, enim earum amet assumenda nesciunt. Obcaecati reiciendis perferendis officia.
-            Iusto quisquam quae impedit odio eius repellat assumenda, eligendi sit ducimus architecto, repudiandae cumque vero consectetur culpa, aliquam totam iste! Nemo molestiae odit commodi velit, a ipsum vel ducimus natus.
-            Temporibus voluptatum cum accusantium quia maiores eius, adipisci voluptas minima eum, consequatur architecto, quo voluptates minus culpa commodi blanditiis numquam molestias hic officiis reprehenderit iste possimus ex doloremque vitae! Fuga?
-            Porro minus eum tenetur enim veritatis! Quaerat earum doloribus et maiores harum magnam, rem officiis facilis quae, eaque, nihil quod in numquam minima quidem pariatur vitae delectus. Veritatis, numquam sed.
-            Magni numquam maxime vel ipsa cupiditate, ab natus assumenda dolor quia nam non quasi quis ipsam accusantium impedit fugiat voluptatibus dolorum in sed. Tenetur vitae, natus quae illum eveniet amet.
-            Recusandae harum voluptate sapiente mollitia necessitatibus accusantium quas praesentium molestiae, doloremque deserunt, iure dolorem non, libero inventore excepturi sint repellat quo! Ex corporis sit natus assumenda itaque qui est recusandae.
-            Quo harum dolore quasi similique voluptatum totam accusantium perferendis officiis, recusandae veniam error aliquid. Quod ipsum tenetur debitis tempore exercitationem eveniet maxime, natus veniam nam magni accusantium rerum architecto vero!
-            Quo maxime rerum at deleniti quidem aspernatur quia aliquam, repellendus sapiente. Quibusdam sunt accusamus odit vel consequuntur provident facere pariatur fuga magnam vero inventore, aut temporibus ipsa sed voluptas. Rerum.
-            Consequatur accusantium, illum cupiditate praesentium ad hic esse corporis placeat aspernatur deserunt a nostrum sit quod in excepturi ab! Corporis cupiditate minus nemo. Dolores earum, quidem nostrum voluptas optio consectetur?
-            Voluptatibus vero iure voluptate praesentium, accusamus aliquam at nulla nisi natus adipisci optio ad laboriosam necessitatibus libero ipsam quod, nesciunt voluptates. Distinctio consequatur at optio ipsa, doloremque eligendi suscipit dolores.
-            Dignissimos vel exercitationem fugit fuga. Repudiandae accusantium tempore veniam nisi, sequi cumque animi fugiat fuga, necessitatibus iusto numquam nemo. Quas dignissimos, adipisci iure eum rem beatae ratione veritatis et? Enim!
-            Non, facilis assumenda! Veniam temporibus accusamus, tempore repellat impedit eaque rerum commodi rem doloribus? Temporibus quae sint vitae, quasi facilis quibusdam, maxime nisi, ex suscipit impedit eveniet adipisci illum quisquam!
-            Nostrum eaque dignissimos ipsa modi, eveniet voluptatibus ut iure in earum sapiente quasi. Ab sapiente aliquam ipsa corporis dolore impedit fuga quam officia a laborum. Optio fugiat officiis pariatur hic?
-            Dolore beatae nihil deserunt magni, facere distinctio cumque fugiat eos repellat non autem saepe repudiandae nesciunt consectetur accusantium ullam, quaerat nam quam. Eaque, tempora libero dolore dolorum iste iusto recusandae?
-            Consequatur veniam ab aspernatur? Accusantium, adipisci incidunt. Impedit suscipit placeat sequi id molestias eaque dolore odio facilis nemo natus nostrum voluptatibus veritatis porro architecto sapiente provident totam, assumenda laborum animi?
-            Dicta sint ipsa odit eligendi esse. Ab magni nobis voluptatibus exercitationem quos sed provident, illo porro? Sed, harum. Numquam, odio laborum! Veritatis quaerat dolores inventore similique cum voluptate tempora accusamus.
-            Recusandae eum temporibus quos rem necessitatibus officia, eveniet aspernatur aliquam soluta. Laudantium, mollitia. Ex quas, modi nisi qui suscipit culpa hic reiciendis. Illum dolores hic enim harum, inventore magni sunt!
-            Quis sapiente incidunt veniam qui dolore recusandae deserunt alias cum harum quasi expedita officiis possimus pariatur voluptate quo, quas voluptatum ipsum unde, rerum saepe in assumenda sunt accusantium! Ab, obcaecati?
-            Quae, soluta. Ipsam nam distinctio praesentium commodi. Obcaecati libero nihil consequuntur tempora? Sit excepturi quod eos aliquid velit quaerat delectus sunt necessitatibus eveniet qui corporis perferendis, voluptas unde vero dicta?
-            Autem repellat excepturi, eaque similique aut qui facere quam totam blanditiis eveniet commodi magnam. Aliquam nobis aut magni natus labore nisi, quo soluta perspiciatis excepturi quod rem, provident laborum molestiae!
-            Nam odit sint dolore beatae quia suscipit impedit placeat sunt asperiores excepturi, vero nemo sed quam quae minima repellat non necessitatibus. Dolorem architecto vero sunt rerum, nemo culpa distinctio voluptatem?
-            Optio itaque pariatur quia, laborum minus dignissimos! Nihil, enim non. Magni eos est iusto similique dolorem quasi quos numquam nisi tempore ipsum, nobis, deserunt a officia vel hic eaque dolorum!
-            Quas modi ab consequuntur temporibus eius quod, quidem commodi illo in ut id accusamus. Delectus magni aliquid eum et sequi iure repudiandae ad nesciunt expedita accusamus? Quos cupiditate sunt autem?
-            Ullam eum quasi unde repudiandae, consectetur voluptatibus suscipit sit error dignissimos, aliquam est maxime, delectus odit quaerat sed facere reiciendis. Assumenda ratione quis sint expedita qui pariatur quidem iste dicta?
-            Soluta aliquam at libero ipsum fugiat ducimus ea beatae, atque ipsa fuga sequi quam commodi ex hic error dolorum, facere earum recusandae repudiandae? Natus eius soluta optio, officia harum beatae?
-            Voluptatibus unde vel nam magni excepturi cupiditate odio aut saepe, aperiam temporibus libero doloribus corporis esse, facilis fuga rerum eaque accusamus nihil quam ipsam. Autem totam culpa consequatur cum ex?
-            Adipisci natus unde architecto iste nesciunt distinctio quidem quia maiores, explicabo delectus impedit. Omnis, sed distinctio, corporis exercitationem ullam accusamus commodi neque nulla tenetur architecto atque officiis deleniti eaque. Minus.
-            Debitis nisi deserunt vel nam unde voluptatibus officiis, ipsum accusamus magnam quae provident, repudiandae, doloribus nostrum mollitia? Sequi, ducimus tempora iure dolores voluptas, vero eaque beatae culpa, laudantium voluptatum totam?
-            Voluptates aliquam illo at ipsam laudantium consequuntur eligendi, consectetur officiis suscipit odio illum magni corrupti perferendis molestiae est animi mollitia hic enim tempora vitae incidunt vero in natus. Dolorem, cumque?
-            Deserunt aliquid ducimus eum iste. Dignissimos, ullam eaque ratione quod hic quo eveniet deleniti veniam maiores ut odit excepturi eius, nihil consectetur voluptatibus dolor minus corporis impedit nostrum dolorem placeat.
-            Necessitatibus nihil, porro voluptatibus ipsa exercitationem distinctio delectus! Quaerat odit omnis nihil quisquam, eligendi eos, veritatis sequi quasi explicabo neque, aliquid illum ducimus esse fuga repudiandae. Quos itaque reiciendis cum?
-            Sit dolor odit aliquid accusamus mollitia molestiae quas earum doloremque omnis dolorum recusandae voluptates perferendis pariatur corporis, rem ipsam, ab repellat quae tempora laudantium blanditiis. Fugiat voluptate culpa sunt doloribus.
-            Temporibus dignissimos suscipit excepturi quisquam voluptate. Rem officiis nobis molestiae deserunt asperiores nemo quia voluptas nam recusandae officia, voluptatum dolor perferendis neque cupiditate, atque cum totam laudantium et sunt fugit!
-            Quo, accusamus ex! Culpa consequatur impedit exercitationem quae dolorum quaerat ex maiores veniam, eveniet ea beatae debitis quidem? Aliquid iusto dolorum qui aliquam reprehenderit debitis modi perspiciatis nisi pariatur maiores!
+          {{content}}
         </div>
         <div class="content-tag">
-            <div class="row">
-                <div class="tag">#文章標籤</div>
-                <div class="tag">#文章關鍵字</div>
-                <div class="tag">#SEO</div>
-            </div>
+          <div class="row">
+            <div class="tag">{{tags}}</div>
+            <div class="tag">#文章關鍵字</div>
+            <div class="tag">#SEO</div>
+          </div>
         </div>
-     
+
+      </div>
+      <div class="separator"></div>
+
+      <div class="related">
+        相關文章
+      </div>
+      <div class="row">
+        <div class="post-card">
+          <div class="toprow">
+            <div class="topline-left">
+              <img src="/static/meberleftline.png" alt="">
+            </div>
+            <div class="post-card-header"></div>
+          </div>
+
+
+          <div class="post-card-content">
+            <div class="post-card-article">標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</div>
+            <div class="post-card-article">文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要</div>
+            <div class="post-card-article">
+              <div class="post-card-footer">
+                <div>
+                  作者名稱
+                </div>
+                <div>
+                  YYYY/MM/DD
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="toprow">
+            <div class="topline-left">
+              <img src="/static/meberleftline.png" alt="">
+            </div>
+            <div class="post-card-header"></div>
+          </div>
+
+
+          <div class="post-card-content">
+            <div class="post-card-article">標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</div>
+            <div class="post-card-article">文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要</div>
+            <div class="post-card-article">
+              <div class="post-card-footer">
+                <div>
+                  作者名稱
+                </div>
+                <div>
+                  YYYY/MM/DD
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="toprow">
+            <div class="topline-left">
+              <img src="/static/meberleftline.png" alt="">
+            </div>
+            <div class="post-card-header"></div>
+          </div>
+
+
+          <div class="post-card-content">
+            <div class="post-card-article">標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</div>
+            <div class="post-card-article">文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要</div>
+            <div class="post-card-article">
+              <div class="post-card-footer">
+                <div>
+                  作者名稱
+                </div>
+                <div>
+                  YYYY/MM/DD
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="separator"></div>
-
-        <div class="related">
-            相關文章
-        </div>
-        <div class="row">
-        <div class="post-card">
-          <div class="toprow">
-            <div class="topline-left">
-              <img src="/static/meberleftline.png" alt="">
-            </div>
-            <div class="post-card-header"></div>
-          </div>
-          
-           
-          <div class="post-card-content">
-              <div class="post-card-article">標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</div>
-              <div class="post-card-article">文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要</div>
-              <div class="post-card-article">
-              <div class="post-card-footer">
-                  <div>
-                      作者名稱
-                  </div>
-                    <div>
-                      YYYY/MM/DD
-                  </div>
-              </div>
-              </div>
-          </div>
-      </div>
-        <div class="post-card">
-          <div class="toprow">
-            <div class="topline-left">
-              <img src="/static/meberleftline.png" alt="">
-            </div>
-            <div class="post-card-header"></div>
-          </div>
-          
-           
-          <div class="post-card-content">
-              <div class="post-card-article">標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</div>
-              <div class="post-card-article">文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要</div>
-              <div class="post-card-article">
-              <div class="post-card-footer">
-                  <div>
-                      作者名稱
-                  </div>
-                    <div>
-                      YYYY/MM/DD
-                  </div>
-              </div>
-              </div>
-          </div>
-      </div>
-        <div class="post-card">
-          <div class="toprow">
-            <div class="topline-left">
-              <img src="/static/meberleftline.png" alt="">
-            </div>
-            <div class="post-card-header"></div>
-          </div>
-          
-           
-          <div class="post-card-content">
-              <div class="post-card-article">標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題</div>
-              <div class="post-card-article">文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要</div>
-              <div class="post-card-article">
-              <div class="post-card-footer">
-                  <div>
-                      作者名稱
-                  </div>
-                    <div>
-                      YYYY/MM/DD
-                  </div>
-              </div>
-              </div>
-          </div>
-      </div>
-        </div>
-    </div>
-</article>
+  </article>
 
 
-{{/post}}
- <style>
-        .writetitle{
-         display: flex;
-            justify-content: space-between;
-        
-        }
-        .righttitle{
-          width: 100%;
-          padding-left: 15px;
-        }
-        .post-card-footer {
-            display: flex;
-            justify-content: space-between;
-        }
-        .toprow{
-           display: flex;
-            justify-content: space-between;
-        }
 
-        .writetype{
-            color: #42403D;
-            font-weight: 400; 
-            font-size: 16px;
-        }
-        .maintitle{
-            color: #42403D;
-            font-weight: 700; 
-            font-size: 30px;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+  <style>
+    .writetitle {
+      display: flex;
+      justify-content: space-between;
 
-        .secondtitle{
-            font-size: 24px;
-            font-weight: 700; 
-            font-family: 'Noto Sans TC', sans-serif;
-            color: #42403D;
-        }
+    }
 
-        .quote-content{
-            padding: 15px;
-        }
-        .rightcorner-quote{
-            float: right;
-            font-size: 30px;
-            color: #FAC02C;
-            font-weight: 700; 
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-        .leftcorner-quote{
-            font-size: 30px;
-            color: #FAC02C;
-            font-weight: 700; 
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-        .quote-content{
-            font-size: 25px;
-            color: #42403D;
-            font-weight: 400; 
-            font-family: 'Noto Sans TC', sans-serif;
-             display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    .righttitle {
+      width: 100%;
+      padding-left: 15px;
+    }
 
-        .wr-content{
-            margin-top: 5%;
-        }
+    .post-card-footer {
+      display: flex;
+      justify-content: space-between;
+    }
 
-        .titlefooter{
-            padding-left: 15px;
-        }
+    .toprow {
+      display: flex;
+      justify-content: space-between;
+    }
 
-        .content-tag{
-            padding-top: 20px;
-            float: left;
-        }
-        .tag{
-        background-color: #FAC02C;
-        border-radius: 40px;
-        margin-left: 15px;
-        text-align: left;
-        font-size: 16px;
-        color: #fff;
-        }
-        .separator {
-        margin-top: 60px; 
-        border: #D9D9D9 1px solid;
-        }
-        .post-card {
-        width: 304px;
-        height: 317px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin: 10px;
-        }
-        .post-card-header {
-        padding: 10px;
-        text-align: center;
-        flex: 5; 
-         background-color: #D9D9D9;
-         border-radius: 20px;
-        }
-        .post-card-article{
-        font-size: 14px;
-        color: #42403D;
-        font-weight: 400; 
-        font-family: 'Noto Sans TC', sans-serif;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        }
-        .post-card-content {
-        width: 100%;
-        height: 120px;
-        overflow: hidden;
-        background-color: #fff;
-        }
-        .row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
+    .writetype {
+      color: #42403D;
+      font-weight: 400;
+      font-size: 16px;
+    }
 
-        .related{
-          font-size: 24px;
-          color: #42403D;
-          font-weight: 700; 
-          font-family: 'Noto Sans TC', sans-serif;
-          margin-top: 20px;
-        }
+    .maintitle {
+      color: #42403D;
+      font-weight: 700;
+      font-size: 30px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
- </style>
- <script>
-    
+    .secondtitle {
+      font-size: 24px;
+      font-weight: 700;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #42403D;
+    }
+
+    .quote-content {
+      padding: 15px;
+    }
+
+    .rightcorner-quote {
+      float: right;
+      font-size: 30px;
+      color: #FAC02C;
+      font-weight: 700;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .leftcorner-quote {
+      font-size: 30px;
+      color: #FAC02C;
+      font-weight: 700;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .quote-content {
+      font-size: 25px;
+      color: #42403D;
+      font-weight: 400;
+      font-family: 'Noto Sans TC', sans-serif;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .wr-content {
+      margin-top: 5%;
+    }
+
+    .titlefooter {
+      padding-left: 15px;
+    }
+
+    .content-tag {
+      padding-top: 20px;
+      float: left;
+    }
+
+    .tag {
+      background-color: #FAC02C;
+      border-radius: 40px;
+      margin-left: 15px;
+      text-align: left;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .separator {
+      margin-top: 60px;
+      border: #D9D9D9 1px solid;
+    }
+
+    .post-card {
+      width: 304px;
+      height: 317px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 10px;
+    }
+
+    .post-card-header {
+      padding: 10px;
+      text-align: center;
+      flex: 5;
+      background-color: #D9D9D9;
+      border-radius: 20px;
+    }
+
+    .post-card-article {
+      font-size: 14px;
+      color: #42403D;
+      font-weight: 400;
+      font-family: 'Noto Sans TC', sans-serif;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .post-card-content {
+      width: 100%;
+      height: 120px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .related {
+      font-size: 24px;
+      color: #42403D;
+      font-weight: 700;
+      font-family: 'Noto Sans TC', sans-serif;
+      margin-top: 20px;
+    }
+
+    a:visited {
+      color: #42403D;
+    }
+
+    .tag a:visited {
+      color: #fff;
+    }
+  </style>
+  <script>
+
   </script>
+  {{/post}}
